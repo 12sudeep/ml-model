@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Marks Predictor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #c60d0d 0%, #e5e0e3 100%);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 3em;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 40px;
+      }
+      s form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      label {
+        font-size: 1.2em;
+        color: #555;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: calc(100% - 24px);
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto 20px auto;
+        background-color: #f9f9f9;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+        background-color: #5c67f2;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        background-color: #3f4dc7;
+      }
+
+      .pass {
+        color: green;
+      }
+
+      .fail {
+        color: red;
+      }
+
+      .error {
+        color: black;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Student Marks Predictor</h1>
+      <form method="post">
+        <label for="study_hours">Enter Study Hours:</label>
+        <input type="text" id="study_hours" name="study_hours" required />
+        <button type="submit">Predict Marks</button>
+      </form>
+      {% if marks is not none %}
+      <h2>Predicted Marks: <span class="{{ color }}">{{ marks }}</span></h2>
+      {% endif %}
+    </div>
+  </body>
+</html>

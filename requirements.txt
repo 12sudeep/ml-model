@@ -1,0 +1,17 @@
+# Basic flask app format
+
+# /app
+#   |-- app.py
+#   |-- model.pkl
+#   |-- requirements.txt
+#   |-- templates/
+#       |-- index.html
+
+
+Flask
+joblib
+gunicorn
+pandas
+scikit-learn
+numpy
+# Add other libraries as needed
